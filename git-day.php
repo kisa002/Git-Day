@@ -11,8 +11,41 @@
 
     $count = explode('data-count="', $web);
     
-    for($i=1; $i<=371; $i++)
+    $max = count($count);
+
+    $cont = 0;
+
+    for($i=1; $i<$max; $i++)
     {
-        echo $count[$i]."<br>";
+        $count[$i] = explode('"', $count[$i]);
+        $count[$i] = $count[$i][0];
+        
+        if($i == $max - 1)
+        {
+            if($count[$i] >= 0)
+                $cont ++;
+        }
+        else
+        {   
+            if($count[$i] == 0)
+                $cont = 0;
+            else
+                $cont ++;
+        }
+        
+        // echo $count[$i]."<br>";
     }
+
+    // echo "<$cont>";
 ?>
+
+<html>
+    <head>
+        <title>Git-Day</title>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <div>당신의 1일 1커밋은 <b><?php echo $cont ?>일</b> 간 지속되었습니다!</div>
+    </body>
+</html>
