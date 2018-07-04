@@ -38,6 +38,11 @@
             else
                 $cont ++;
         }
+
+        $row .= "[$i, $count[$i]]";
+
+        if($i != $max - 1)
+            $row .= ",";
         
         // echo $count[$i]."<br>";
     }
@@ -57,5 +62,37 @@
         <div>하지만, 아쉽게도 <b><?php echo $miss ?>일</b>을 커밋하는데 실패하셨습니다 ㅠㅠ</div>
         <br>
         <div>365일 커밋까지 <b><?php echo (365-$cont) ?>일</b> 남았습니다!</div>
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <div id="chart_div"></div>
+        
+        <script>
+            google.charts.load('current', {packages: ['corechart', 'line']});
+            google.charts.setOnLoadCallback(drawBasic);
+
+            function drawBasic() {
+
+                var data = new google.visualization.DataTable();
+                data.addColumn('number', 'X');
+                data.addColumn('number', 'Commit Count');
+
+                data.addRows([<?php echo $row ?>]);
+
+                var options = {
+                    hAxis: {
+                    title: 'Date'
+                    },
+                    vAxis: {
+                    title: 'Commit'
+                    }
+                };
+
+                var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+
+                chart.draw(data, options);
+            }
+
+            drawBasic();
+        </script>
     </body>
 </html>
