@@ -16,6 +16,8 @@
     $cont = 0;
     $miss = 0;
 
+    $today = true;
+
     for($i=1; $i<$max; $i++)
     {
         $count[$i] = explode('"', $count[$i]);
@@ -26,7 +28,7 @@
             if($count[$i] > 0)
                 $cont ++;
             else
-                $miss ++;
+                $today = false;
         }
         else
         {   
@@ -62,6 +64,8 @@
         <div>하지만, 아쉽게도 <b><?php echo $miss ?>일</b>을 커밋하는데 실패하셨습니다 ㅠㅠ</div>
         <br>
         <div>365일 커밋까지 <b><?php echo (365-$cont) ?>일</b> 남았습니다!</div>
+        <br>
+        <div>아름다운 잔디밭까지는 <b><?php echo($max - $cont - 1)?>일</b> 남았습니다:)</div>
 
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <div id="chart_div"></div>
