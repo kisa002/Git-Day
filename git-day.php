@@ -16,7 +16,7 @@
     $cont = 0;
     $miss = 0;
 
-    $today = true;
+    $today = "멋져요! 오늘 커밋도 완료!";
 
     for($i=1; $i<$max; $i++)
     {
@@ -28,7 +28,7 @@
             if($count[$i] > 0)
                 $cont ++;
             else
-                $today = false;
+                $today = "오늘 커밋을 안하셨습니다!";
         }
         else
         {   
@@ -66,6 +66,8 @@
         <div>365일 커밋까지 <b><?php echo (365-$cont) ?>일</b> 남았습니다!</div>
         <br>
         <div>아름다운 잔디밭까지는 <b><?php echo($max - $cont - 1)?>일</b> 남았습니다:)</div>
+        <br>
+        <div><?php echo $today ?></div>
 
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <div id="chart_div"></div>
