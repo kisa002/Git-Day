@@ -28,7 +28,7 @@
             if($count[$i] > 0)
                 $cont ++;
             else
-                $today = "오늘 커밋을 안하셨습니다!";
+                $today = "이런 아직 커밋을 안하셨네요!<br>커밋하시는 거 잊지 마세요!";
         }
         else
         {   
@@ -56,6 +56,14 @@
     <head>
         <title>Git-Day</title>
         <meta charset="UTF-8">
+
+        <style>
+            body
+            {
+                background-color: #25AAFF;
+                color: #FFFFFF;
+            }
+        </style>
     </head>
 
     <body>
@@ -68,6 +76,7 @@
         <div>아름다운 잔디밭까지는 <b><?php echo($max - $cont - 1)?>일</b> 남았습니다:)</div>
         <br>
         <div><?php echo $today ?></div>
+        <br>
 
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <div id="chart_div"></div>
