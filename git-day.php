@@ -81,8 +81,14 @@
     <body>
         <div class="container">
             <div>당신의 1일 1커밋은 <b><?php echo $cont ?>일</b> 간 지속되었습니다!</div>
-
-            <div>하지만, 아쉽게도 <b><?php echo $miss ?>일</b>을 커밋하는데 실패하셨습니다 ㅠㅠ</div>
+            <?php
+                if($miss < 5)
+                    echo "<div>아쉽게도 <b>$miss일</b>을 커밋하는데 실패하셨습니다 ㅠㅠ</div>";
+                else if($miss < 10)
+                    echo "<div>노력해 보셔야합니다! <b>$miss일</b>을 커밋하는데 실패하셨어요</div>";
+                else
+                    echo "<div>의지가 부족합니다.. <b>$miss일</b>을 커밋하는데 실패하셨습니다....</div>";
+            ?>
             <br>
             <div>365일 커밋까지 <b><?php echo (365-$cont) ?>일</b> 남았습니다!</div>
             <br>
