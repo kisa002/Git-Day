@@ -96,6 +96,7 @@
             <br>
             <div><?php echo $today ?></div>
             <br>
+            <a href="/git-day">프로필 이름 다시 입력하기</a>
 
             <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
             <div id="chart_div"></div>
