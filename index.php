@@ -5,7 +5,7 @@
 
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_URL, "https://github.com/kisa002");
+    curl_setopt($ch, CURLOPT_URL, "https://github.com/$username");
     $web = curl_exec($ch);
     curl_close($ch);
 
@@ -130,6 +130,11 @@
                 background-color: rgba(255, 255, 255, 1);
                 color: #FFFFFF;
             }
+
+            a
+            {
+                color: #FFFFFF;
+            }
         </style>
     </head>
 
@@ -171,7 +176,7 @@
                     <br>
                     <div><?php echo $today ?></div>
                     <br>
-                    <a href="index.php" style="text-align:center">프로필 이름 다시 입력하기</a>
+                    <div style="text-align:center;"><a href="index.php" style="text-align:center">프로필 이름 다시 입력하기</a></div>
                     <br>
 
                     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
