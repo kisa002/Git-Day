@@ -20,6 +20,8 @@
     $cont = 0;
     $miss = 0;
 
+    $day = 0;
+
     $today = "멋져요! 오늘 커밋도 완료!";
 
     for($i=1; $i<$max; $i++)
@@ -30,7 +32,10 @@
         if($i == $max - 1)
         {
             if($count[$i] > 0)
+            {
                 $cont ++;
+                $day ++;
+            }
             else
                 $today = "오늘도 커밋하는 것! 잊지말아주세요!";
         }
@@ -42,7 +47,10 @@
                 $miss ++;
             }
             else
+            {
                 $cont ++;
+                $day ++;
+            }
         }
 
         $row .= "[$i, $count[$i]]";
@@ -156,7 +164,7 @@
                 else
                 {
                     ?>
-                    <div class="continue_day"><?php echo $all ?></div>
+                    <div class="continue_day"><?php echo $day ?></div>
                     <hr class="under">
                     <?php
                         if($miss == 0)
