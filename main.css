@@ -1,0 +1,75 @@
+body
+{
+    background-color: #25AAFF;
+    color: #FFFFFF;
+
+    display: table;
+    margin: 0 auto;
+
+    height: 100%;
+}
+
+.container
+{
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.continue_day
+{
+    font-size: 150px;
+    
+    text-align: center;
+}
+
+.under
+{
+    background-color: #FFFFFF;
+    
+    height: 0.5%;
+    border: 0;
+}
+
+form
+{
+    text-align: center;
+}
+
+form input
+{
+    font-size: 50px;
+
+    color: #FFFFFF;
+    background: transparent;
+    
+    width: 80%;
+    text-align: center;
+
+    border: 0;
+}
+
+form input::placeholder
+{
+    color: #FFFFFF;
+}
+
+form button
+{
+    width: 40%;
+    height: 40px;
+}
+
+form hr
+{
+    width: 80%;
+    height: 2px;
+    
+    background-color: rgba(255, 255, 255, 1);
+    color: #FFFFFF;
+}
+
+a
+{
+    color: #FFFFFF;
+}

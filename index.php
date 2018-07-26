@@ -57,11 +57,7 @@
 
         if($i != $max - 1)
             $row .= ",";
-        
-        // echo $count[$i]."<br>";
     }
-
-    // echo "<$cont>";
 ?>
 
 <html>
@@ -69,83 +65,7 @@
         <title>Git-Day</title>
         <meta charset="UTF-8">
 
-        <style>
-            body
-            {
-                background-color: #25AAFF;
-                color: #FFFFFF;
-
-                display: table;
-                margin: 0 auto;
-
-                height: 100%;
-            }
-            
-            .container
-            {
-                height: 100%;
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            .continue_day
-            {
-                font-size: 150px;
-                
-                text-align: center;
-            }
-
-            .under
-            {
-                background-color: #FFFFFF;
-                
-                height: 0.5%;
-                border: 0;
-            }
-
-            form
-            {
-                text-align: center;
-            }
-
-            form input
-            {
-                font-size: 50px;
-
-                color: #FFFFFF;
-                background: transparent;
-                
-                width: 80%;
-                text-align: center;
-
-                border: 0;
-            }
-            
-            form input::placeholder
-            {
-                color: #FFFFFF;
-            }
-
-            form button
-            {
-                width: 40%;
-                height: 40px;
-            }
-            
-            form hr
-            {
-                width: 80%;
-                height: 2px;
-                
-                background-color: rgba(255, 255, 255, 1);
-                color: #FFFFFF;
-            }
-
-            a
-            {
-                color: #FFFFFF;
-            }
-        </style>
+        <link rel="stylesheet" href="main.css">
     </head>
 
     <body>
@@ -178,7 +98,7 @@
                     ?>
                     <br>
                     <?php
-                        if($max - $cont - 2 == 0)
+                        if($max - $cont - 2 < 0)
                             echo "<div>우와아아아... 아름다워요... 이런 아름다운 잔디밭은 처음 보아요...!</div>";
                         else
                             echo "<div>아름다운 잔디밭까지는 <b>".($max - $cont - 1)."일</b> 남았습니다 :)</div>";
