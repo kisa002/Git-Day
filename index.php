@@ -77,7 +77,6 @@
                     <form method='GET'>
                         <input type=text name='username' placeholder='username'><br>
                         <hr>
-                        <!--<button type='subimit' >조회</button>-->
                     </form>
                     <?php
                 }
