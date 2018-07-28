@@ -66,6 +66,16 @@
         <meta charset="UTF-8">
 
         <link rel="stylesheet" href="main.css">
+        <link rel="icon" type="image/x-icon" class="js-site-favicon" href="http://haeyum.com/git-day/favicon.ico">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Git Day">
+        <meta property="og:url" content="http://haeyum.com/git-day/favicon.ico">
+        <meta property="og:description" content="자신의 깃허브 커밋 기록을 확인해보세요!">
+<!--
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="210" />
+        <meta property="og:image" content="http://haeyum.com/git-day/favicon.png">
+-->
     </head>
 
     <body>
