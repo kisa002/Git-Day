@@ -1,7 +1,7 @@
 <?php
 //    content("content-type:text/html;charset:utf8");
 
-    $username = $_GET['username'];
+    $username = $_REQUEST['username'];
 
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -84,7 +84,7 @@
                 if(empty($username))
                 {
                     ?>
-                    <form method='GET'>
+                    <form method='POST'>
                         <input type=text name='username' placeholder='username'><br>
                         <hr>
                     </form>
