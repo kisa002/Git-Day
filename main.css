@@ -47,6 +47,7 @@ form input
     text-align: center;
 
     border: 0;
+    outline: none;
 }
 
 form input::placeholder
